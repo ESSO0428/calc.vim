@@ -156,25 +156,8 @@ function! calc#open() abort
   file Calculator
 
   " Keybindings
-  inoremap <buffer> <silent> <C-c> <Esc>:bdelete!<CR>
-
   inoremap <buffer> <silent> <CR>  <C-o>:silent! call calc#eval()<CR>
-
-  nnoremap <buffer> <silent> J     <C-o>:silent! call calc#history("n")<CR>
-  nnoremap <buffer> <silent> K     <C-o>:silent! call calc#history("p")<CR>
-
-  inoremap <buffer> <silent> <C-n> <C-o>:silent! call calc#history("n")<CR>
-  inoremap <buffer> <silent> <C-p> <C-o>:silent! call calc#history("p")<CR>
-
-  inoremap <buffer> <silent> <C-j> <C-o>:silent! call calc#history("n")<CR>
-  inoremap <buffer> <silent> <C-k> <C-o>:silent! call calc#history("p")<CR>
-
-  inoremap <buffer> <silent> <M-n> <C-o>:silent! call calc#val_history("n")<CR>
-  inoremap <buffer> <silent> <M-p> <C-o>:silent! call calc#val_history("p")<CR>
-
-  inoremap <buffer> <silent> <M-j> <C-o>:silent! call calc#val_history("n")<CR>
-  inoremap <buffer> <silent> <M-k> <C-o>:silent! call calc#val_history("p")<CR>
-
+  
   " History in the calculator
   let b:calc_history = [""]
   let b:calc_history_changing = 0
